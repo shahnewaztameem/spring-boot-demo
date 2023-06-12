@@ -16,8 +16,13 @@ public class CustomerController {
     }
 
     @GetMapping
-    List<Customer> getCustomer() {
-        return customerService.getCustomer();
+    List<Customer> getCustomers() {
+        return customerService.getCustomers();
+    }
+
+    @GetMapping(path = "{customerId}")
+    Customer getCustomer(@PathVariable("customerId") Long id) {
+        return customerService.getCustomer(id);
     }
 
     @PostMapping

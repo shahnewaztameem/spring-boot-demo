@@ -12,7 +12,7 @@ public class CustomerConfiguration {
     @Bean
     CommandLineRunner commandLineRunner() {
         return args -> {
-            System.out.println("Hooray from commandline runner");
+            System.out.println("Hello from commandline runner");
         };
     }
 

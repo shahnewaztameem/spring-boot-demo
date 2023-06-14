@@ -19,6 +19,6 @@ public class CustomerService {
     }
 
     Customer getCustomer(Long id) {
-        return getCustomers().stream().filter(customer -> customer.getId().equals(id)).findFirst().orElseThrow(() -> new IllegalStateException("Customer Not Found"));
+        return getCustomers().stream().filter(customer -> customer.getId().equals(id)).findFirst().orElseThrow(() -> new IllegalStateException("Customer with id "+ id + " Not Found"));
     }
 }

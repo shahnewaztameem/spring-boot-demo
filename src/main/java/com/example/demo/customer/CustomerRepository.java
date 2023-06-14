@@ -8,7 +8,7 @@ public class CustomerRepository implements CustomerRepo{
     public List<Customer> getCustomers() {
         // connect to read db
         return Collections.singletonList(
-                new Customer(1l, "todo real db", "todo")
+                new Customer(1l, "todo real db", "demo@mail.com", "todo")
         );
     }
 }

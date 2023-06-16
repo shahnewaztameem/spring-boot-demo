@@ -1,5 +1,6 @@
 package com.example.demo.customer;
 
+import com.example.demo.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,6 @@ public class CustomerService {
     }
 
     Customer getCustomer(Long id) {
-        return getCustomers().stream().filter(customer -> customer.getId().equals(id)).findFirst().orElseThrow(() -> new IllegalStateException("Customer with id "+ id + " Not Found"));
+        return getCustomers().stream().filter(customer -> customer.getId().equals(id)).findFirst().orElseThrow(() -> new NotFoundException("Customer with id "+ id + " Not Found"));
     }
 }
